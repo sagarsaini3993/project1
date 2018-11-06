@@ -26,7 +26,7 @@
   "cordova-sqlite-evcore-extbuild-free": {
     "source": {
       "type": "registry",
-      "id": "cordova-sqlite-evcore-extbuild-free"
+      "id": "cordova-sqlite-evcore-extbuild-free@^0.9.9-rc1"
     },
     "is_top_level": true,
     "variables": {}
