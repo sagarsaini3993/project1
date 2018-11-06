@@ -2,6 +2,9 @@
 document.addEventListener("deviceReady", connectToDatabase);
 document.getElementById("update").addEventListener("click", updateButton);
 document.getElementById("takePhotoButton").addEventListener("click", takePhoto);
+document.getElementById("pickPhotoButton").addEventListener("click", pickPhotoFromGallery);
+
+
 
 var inputName = 0;
 var inputPassword = 0;
@@ -30,6 +33,9 @@ function displayResults( tx, results ){
           document.getElementById("description").value = results.rows.item(i).description;
           document.getElementById("password").value = results.rows.item(i).password;
           document.getElementById("dob").value = results.rows.item(i).birthdate;
+          document.getElementById("phone").value = results.rows.item(i).phone;
+          // document.getElementById("profile").value = results.rows.item(i).profile;
+
         }
  
     }
@@ -86,6 +92,7 @@ var location= document.getElementById("location").value;
 var description= document.getElementById("description").value;
 var password= document.getElementById("password").value;
 var dob= document.getElementById("dob").value;
+// var phone= filename;
 console.log(name);
 alert(name);
 // alert(location);
@@ -94,8 +101,8 @@ db.transaction(
 
         function(tx){
           tx.executeSql(
-             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=? where email = ?",
-            [name,location,description,password,dob,mail],
+             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=?, profile=? where email = ?",
+            [name,location, description, password, dob, phone, profile, mail],
             onSuccessExecuteSql,
             onError
              )
@@ -177,6 +184,27 @@ function onReadyTransaction(){
   function onFail(errorMessage){
     console.log("Error Message:" + errorMessage);
     alert("Error Message:" + errorMessage);
+
+
+}
+
+
+
+function pickPhotoFromGallery() {
+  console.log("photo gallery pressed!");
+  alert("photo gallery pressed!");
+
+  // 1. choose options for the camera
+  var cameraOptions = {
+    quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI,
+    encodingType: Camera.EncodingType.JPEG,
+    mediaType: Camera.MediaType.PICTURE,
+    sourceType : Camera.PictureSourceType.PHOTOLIBRARY
+  };
+
+ var pic = navigator.camera.getPicture(onSuccess, onFail, cameraOptions);
+
 
 
 }

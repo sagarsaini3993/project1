@@ -88,7 +88,7 @@ function connectToDatabase() {
 db.transaction(
         function(tx){
             tx.executeSql(
-                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT, description TEXT)",
+                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT, description TEXT, phone INTEGER, profile IMAGE)",
                 [],
                 insertUser,
                 onError
@@ -105,7 +105,7 @@ function insertUser(){
   db.transaction(
         function(tx){
             tx.executeSql(
-                "INSERT INTO user(email, password, name, birthdate, location, description) VALUES('sagar@gmail.com','sagar11', 'sagar','1/1/1994','toronto','lambton college'),('sukh@gmail.com','sukh11', 'sukhwinder','2/2/1994','brampton','ww'),('raman@gmail.com','raman11', 'raman','3/3/1994','toronto','e')",
+                "INSERT INTO user(email, password, name, birthdate, location, description, phone) VALUES('sagar@gmail.com','sagar11', 'sagar','1/1/1994','toronto','lambton college','6474000472'),('sukh@gmail.com','sukh11', 'sukhwinder','2/2/1994','brampton','ww','6474000472'),('raman@gmail.com','raman11', 'raman','3/3/1994','toronto','e','6474000472')",
                 [],
                 onSuccessExecuteSql,
                 onError

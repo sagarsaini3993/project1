@@ -28,7 +28,7 @@ alert(inputMail);
 // alert(inputName);
 // alert(inputDOB);
 // alert(inputLocation);
-    // alert(inputName ,inputPassword, inputName, inputDOB,inputLocation);
+// alert(inputName ,inputPassword, inputName, inputDOB,inputLocation);
 
 
 
