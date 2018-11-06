@@ -41,6 +41,8 @@ function displayResults( tx, results ){
          + "Description: "
         +   results.rows.item(i).description
         + "<br>"
+         + "Phone: "
+        +   results.rows.item(i).phone
        + "<br>"
         + "</p>";
      

@@ -22,6 +22,7 @@ function signupButton() {
     inputDOB = document.getElementById("dob").value;
     inputLocation = document.getElementById("location").value;
     inputDescription = document.getElementById("description").value;
+     inputPhone = document.getElementById("phone").value;
 alert(inputMail);
 // alert(inputPassword);
 // alert(inputName);
@@ -107,7 +108,7 @@ function connectToDatabase() {
 db.transaction(
         function(tx){
             tx.executeSql(
-                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT)",
+                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT,phone TEXT, profile IMAGE)",
                 [],
                 onSuccessExecuteSql,
                 onError
@@ -123,8 +124,8 @@ function insertUser(){
   db.transaction(
         function(tx){
             tx.executeSql(
-                "INSERT INTO user(email, password, name, birthdate, location, description)  VALUES(?,?,?,?,?,?)",
-                [inputMail, inputPassword,inputName, inputDOB,inputLocation,inputDescription],
+                "INSERT INTO user(email, password, name, birthdate, location, description, phone)  VALUES(?,?,?,?,?,?,?)",
+                [inputMail, inputPassword, inputName, inputDOB,inputLocation,inputDescription,inputPhone],
                 onSuccessExecuteSql,
                 onError
             )
