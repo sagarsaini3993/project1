@@ -19,10 +19,10 @@
     },
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {},
             "cordova-plugin-camera": {},
-            "cordova-plugin-filepath": {},
-            "cordova-sqlite-evcore-extbuild-free": {}
+            "cordova-sqlite-evcore-extbuild-free": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-filepath": {}
         },
         "platforms": [
             "browser",
