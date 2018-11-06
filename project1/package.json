@@ -13,13 +13,11 @@
         "cordova-android": "^7.1.1",
         "cordova-browser": "^5.0.4",
         "cordova-plugin-camera": "^4.0.3",
-        "cordova-plugin-filepath": "^1.4.2",
         "cordova-sqlite-evcore-extbuild-free": "^0.9.9-rc1"
     },
     "cordova": {
         "plugins": {
             "cordova-plugin-camera": {},
-            "cordova-plugin-filepath": {},
             "cordova-sqlite-evcore-extbuild-free": {}
         },
         "platforms": [

@@ -21,9 +21,6 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "cordova-plugin-filepath": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
     "cordova-sqlite-evcore-extbuild-free": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
@@ -71,7 +68,6 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-filepath": "1.4.2",
     "cordova-sqlite-evcore-extbuild-free": "0.9.9-rc1"
   }
 }
