@@ -42,7 +42,6 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-filepath": "1.4.2",
     "cordova-sqlite-evcore-extbuild-free": "0.9.9-rc1"

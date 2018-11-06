@@ -13,9 +13,6 @@
     "cordova-plugin-filepath": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
     "cordova-sqlite-evcore-extbuild-free": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
