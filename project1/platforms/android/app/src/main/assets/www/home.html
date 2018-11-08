@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin|Libre+Baskerville|Source+Sans+Pro" rel="stylesheet">
      <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script> -->
 
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        
+       <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+         -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -21,11 +21,6 @@
   </head>
 
 <body>
-  <div data-role="header">
-       
-        <h1><button id="profile">Profile</button></h1>
-      
-      </div>
     <div class="container" style="max-height: 60%;">
     <div>
     <div id = "slider" style="width: 70%; margin: 2% auto;">
@@ -39,16 +34,15 @@
       <button class="next" id="nextButton"> > </button>
       <br>
       <br>
-    </div><br><br>
-    
+    </div>
+    <div id="check" style="width: 30%;text-align: center; margin: 0 auto;font-size: 20px; font-family: cursive;">
+
+       <a href="#"> <img src="img/X.png" style="max-width: 15%; max-height: 100px;"> </a>
+      <a href="#">  <img src="img/H.png" style="max-width: 17%;max-height: 90px;">  </a>
+    </div> 
   </div>
 
-<div id="check" style="width: 30%;text-align: center; margin: 0 auto;font-size: 20px; font-family: cursive;">
-<br>
-       <button id="cross"> <img src="img/X.png" style="max-width: 15%; max-height: 100px;"> </button>
-       <br>
-      <button id="heart">  <img src="img/H.png" style="max-width: 17%;max-height: 90px;">  </button>
-    </div> 
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
 </body>

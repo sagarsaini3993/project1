@@ -33,22 +33,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-sqlite-evcore-extbuild-free.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-evcore-extbuild-free/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-evcore-extbuild-free",
-    "clobbers": [
-      "SQLitePlugin"
-    ]
-  },
-  {
-    "id": "cordova-plugin-filepath.FilePath",
-    "file": "plugins/cordova-plugin-filepath/www/FilePath.js",
-    "pluginId": "cordova-plugin-filepath",
-    "clobbers": [
-      "window.FilePath"
-    ]
-  },
-  {
     "id": "cordova-plugin-contacts.contacts",
     "file": "plugins/cordova-plugin-contacts/www/contacts.js",
     "pluginId": "cordova-plugin-contacts",
@@ -124,16 +108,32 @@ module.exports = [
     "merges": [
       ""
     ]
+  },
+  {
+    "id": "cordova-plugin-filepath.FilePath",
+    "file": "plugins/cordova-plugin-filepath/www/FilePath.js",
+    "pluginId": "cordova-plugin-filepath",
+    "clobbers": [
+      "window.FilePath"
+    ]
+  },
+  {
+    "id": "cordova-sqlite-evcore-extbuild-free.SQLitePlugin",
+    "file": "plugins/cordova-sqlite-evcore-extbuild-free/www/SQLitePlugin.js",
+    "pluginId": "cordova-sqlite-evcore-extbuild-free",
+    "clobbers": [
+      "SQLitePlugin"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
   "cordova-plugin-camera": "4.0.3",
-  "cordova-sqlite-evcore-extbuild-free": "0.9.9-rc1",
-  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-plugin-contacts": "3.0.1",
   "cordova-plugin-filepath": "1.4.2",
-  "cordova-plugin-contacts": "3.0.1"
+  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-sqlite-evcore-extbuild-free": "0.9.9-rc1"
 };
 // BOTTOM OF METADATA
 });

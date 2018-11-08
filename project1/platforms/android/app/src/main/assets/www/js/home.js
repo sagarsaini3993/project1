@@ -11,23 +11,23 @@ var slider_content = document.getElementById("box");
 document.getElementById("prewButton").addEventListener("click", minusSlides);
 document.getElementById("nextButton").addEventListener("click", plusSlides);
 
-// ====================click on profile============
-document.getElementById("profile").addEventListener("click", profile);
-function profile(){
-  window.location.replace("profile.html");
-}
+// // ====================click on profile============
+// document.getElementById("profile").addEventListener("click", profile);
+// function profile(){
+//   window.location.replace("profile.html");
+// }
 
-// ======================cross button and click button==========
-document.getElementById("cross").addEventListener("click", cross);
-function cross()
-{
-alert("cross button pressed");
-}
-document.getElementById("heart").addEventListener("click", heart);
-function heart()
-{
-alert("heart button pressed");
-}
+// // ======================cross button and click button==========
+// document.getElementById("cross").addEventListener("click", cross);
+// function cross()
+// {
+// alert("cross button pressed");
+// }
+// document.getElementById("heart").addEventListener("click", heart);
+// function heart()
+// {
+// alert("heart button pressed");
+// }
 
 
 document.getElementById("check");
@@ -188,17 +188,26 @@ function plusSlides() {
     }
     alert(i);
     alert(database[i - 1]["image"]);
-    a.src = database[i - 1]["image"];
-    //a.src = userNearMe[i-1]["image"];
+   // a.src = database[i - 1]["image"];
+    a.src = userNearMe[i-1]["image"];
     document.getElementById("check").innerHTML +=
+        // "<p> Name: " +
+        // database[i - 1]["name"] +
+        // "<br>" +
+        // "Location: " +
+        // database[i - 1]["locations"] +
+        // "<br>" +
+        // "Birthdate: " +
+        // database[i - 1]["dob"] +
+        // "</p>";
         "<p> Name: " +
-        database[i - 1]["name"] +
+        userNearMe[i - 1]["name"] +
         "<br>" +
         "Location: " +
-        database[i - 1]["locations"] +
+        userNearMe[i - 1]["locations"] +
         "<br>" +
         "Birthdate: " +
-        database[i - 1]["dob"] +
+        userNearMe[i - 1]["dob"] +
         "</p>";
 
     //slider_content.innerHTML = "<img src="+image[i-1]+".jpg"; 

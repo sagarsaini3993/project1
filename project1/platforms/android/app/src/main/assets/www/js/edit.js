@@ -4,10 +4,15 @@ document.getElementById("update").addEventListener("click", updateButton);
 document.getElementById("takePhotoButton").addEventListener("click", takePhoto);
 document.getElementById("pickPhotoButton").addEventListener("click", pickPhotoFromGallery);
 document.getElementById("home").addEventListener("click", home);
+document.getElementById("goBack").addEventListener("click", goBack);
 
 function home()
 {
   window.location.replace("home.html");
+}
+function goBack(){
+    window.location.replace("profile.html");
+
 }
 
 var inputName = 0;
