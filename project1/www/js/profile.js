@@ -1,6 +1,32 @@
 //------initiate database---------//
 document.addEventListener("deviceReady", connectToDatabase);
 document.getElementById("edit").addEventListener("click", editButton);
+document.getElementById("logout").addEventListener("click", logout);
+document.getElementById("home").addEventListener("click", home);
+
+var session;
+function logout()
+{
+  session= sessionStorage.removeItem("session");
+    //alert("session"+session);
+        window.location.replace("index.html"); 
+
+}
+function home()
+{
+  session=sessionStorage.getItem("session");
+    //alert("session"+session);
+    if(session==1)
+    {
+    window.location.replace("home.html"); 
+    }
+    else
+    {
+      alert("your session expired please login again");
+       window.location.replace("index.html");
+    }
+}
+
 var inputName = 0;
 var inputPassword = 0;
 var inputMail = 0;
@@ -10,7 +36,17 @@ var db = null;
 var mail = localStorage.getItem("mail");
 function editButton() {
     //alert("login pressed");
+     session=sessionStorage.getItem("session");
+    //alert("session"+session);
+    if(session==1)
+    {
     window.location.replace("edit.html"); 
+    }
+    else
+    {
+      alert("your session expired please login again");
+       window.location.replace("index.html");
+    }
   }
   
 function displayResults( tx, results ){

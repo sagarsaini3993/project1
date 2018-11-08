@@ -1,11 +1,7 @@
 //------initiate database---------//
 document.addEventListener("deviceReady", connectToDatabase);
 document.getElementById("signup").addEventListener("click", signupButton);
-document.getElementById("refresh").addEventListener("click",refreshPage);
 
-function refreshPage() {
-  window.location.reload(true);
-}
 
 var inputName = "";
 var inputPassword = "";
@@ -22,8 +18,8 @@ function signupButton() {
     inputDOB = document.getElementById("dob").value;
     inputLocation = document.getElementById("location").value;
     inputDescription = document.getElementById("description").value;
-     inputPhone = document.getElementById("phone").value;
-alert(inputMail);
+    inputPhone = document.getElementById("phone").value;
+    alert(inputMail);
 // alert(inputPassword);
 // alert(inputName);
 // alert(inputDOB);
@@ -54,12 +50,8 @@ alert(inputMail);
             insertUser();
             window.location.replace("index.html");
       }
-      // else{
-      //    alert("Email already exist");
-      //
-      // }
-
-      for(var i=0; i<results.rows.length; i++) {
+      
+     for(var i=0; i<results.rows.length; i++) {
         if(results.rows.item(i).email == inputMail) {
           alert("email already exist");
         } else {

@@ -3,8 +3,12 @@ document.addEventListener("deviceReady", connectToDatabase);
 document.getElementById("update").addEventListener("click", updateButton);
 document.getElementById("takePhotoButton").addEventListener("click", takePhoto);
 document.getElementById("pickPhotoButton").addEventListener("click", pickPhotoFromGallery);
+document.getElementById("home").addEventListener("click", home);
 
-
+function home()
+{
+  window.location.replace("home.html");
+}
 
 var inputName = 0;
 var inputPassword = 0;
@@ -92,6 +96,7 @@ var location= document.getElementById("location").value;
 var description= document.getElementById("description").value;
 var password= document.getElementById("password").value;
 var dob= document.getElementById("dob").value;
+var phone=document.getElementById("phone").value;
 // var phone= filename;
 console.log(name);
 alert(name);
@@ -101,8 +106,8 @@ db.transaction(
 
         function(tx){
           tx.executeSql(
-             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=?, profile=? where email = ?",
-            [name,location, description, password, dob, phone, profile, mail],
+             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=? where email = ?",
+            [name,location, description, password, dob, phone, mail],
             onSuccessExecuteSql,
             onError
              )
@@ -112,6 +117,10 @@ db.transaction(
     )
     window.location.replace("profile.html"); 
   }
+
+
+
+
 
 
   // =======take photo===========================
@@ -134,6 +143,8 @@ function onReadyTransaction(){
   function onSuccessExecuteSql( tx, results ){
     console.log( 'Execute SQL completed' );
   }
+
+  // ================================
   function onSuccess(filename)
   {
 

@@ -1,10 +1,15 @@
 //------initiate database---------//
 document.addEventListener("deviceReady", connectToDatabase);
 document.getElementById("login").addEventListener("click", loginButton);
+document.getElementById("create").addEventListener("click", redirect);
 var inputName = 0;
 var inputPassword = 0;
 var db = null;
 
+function redirect()
+{
+  window.location.replace("signup.html");
+}
 function loginButton() {
     //alert("login pressed");
     inputName = document.getElementById("email").value;
@@ -42,9 +47,9 @@ function loginButton() {
       localStorage.setItem("password", password);
       localStorage.setItem("userEntry", 1);
 // <<<<<<< HEAD
-      // window.location.replace("home.html"); 
+       window.location.replace("home.html"); 
 // =======
-      window.location.replace("profile.html");
+     // window.location.replace("profile.html");
 // >>>>>>> 2aca83a9f076b1e906d4ff44360c8ca283e2fd66
     }
   }

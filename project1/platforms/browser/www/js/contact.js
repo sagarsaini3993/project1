@@ -4,3 +4,4 @@ function onDeviceReady() {
   myContact.save();
   alert("person saved!");
 }
+// 
