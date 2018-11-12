@@ -64,7 +64,7 @@ function loginButton() {
     localStorage.setItem("userEntry", 1);
   }
   function onError( err ){
-    console.log( err )
+    console.log( "message"+err.message )
   }
 
 function connectToDatabase() {

@@ -41,12 +41,13 @@ function loginButton() {
       name = results.rows.item(i).email;
 
       password = results.rows.item(i).password;
-      // alert(name + password);
+       alert("welcome");
 
       localStorage.setItem("mail", name);
       localStorage.setItem("password", password);
       localStorage.setItem("userEntry", 1);
       sessionStorage.setItem("session", 1);
+      
 // <<<<<<< HEAD
        //window.location.replace("home.html"); 
 // =======
@@ -63,7 +64,7 @@ function loginButton() {
     localStorage.setItem("userEntry", 1);
   }
   function onError( err ){
-    console.log( err )
+    console.log( "message"+err.message )
   }
 
 function connectToDatabase() {

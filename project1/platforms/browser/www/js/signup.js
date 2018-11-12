@@ -68,7 +68,7 @@ function signupButton() {
     console.log( 'Execute SQL completed' );
   }
   function onError( err ){
-    console.log( err )
+    console.log( "error"+err.message )
   }
 
 function connectToDatabase() {
@@ -96,6 +96,8 @@ function connectToDatabase() {
     alert("databse not opened!");
     return false;
   }
+else{
+alert("hello databse");
 
 db.transaction(
         function(tx){
@@ -109,7 +111,7 @@ db.transaction(
         onError,
         onReadyTransaction
     )
-
+}
 }
 function insertUser(){
   alert("inserting user");
