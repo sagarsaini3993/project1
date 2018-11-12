@@ -43,7 +43,8 @@ function displayResults( tx, results ){
           document.getElementById("password").value = results.rows.item(i).password;
           document.getElementById("dob").value = results.rows.item(i).birthdate;
           document.getElementById("phone").value = results.rows.item(i).phone;
-          // document.getElementById("profile").value = results.rows.item(i).profile;
+
+          document.getElementById("photoContainer").value = localStorage.getItem("photo");
 
         }
  
