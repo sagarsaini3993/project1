@@ -44,7 +44,7 @@ function displayResults( tx, results ){
           document.getElementById("dob").value = results.rows.item(i).birthdate;
           document.getElementById("phone").value = results.rows.item(i).phone;
 
-          document.getElementById("photoContainer").value = localStorage.getItem("photo");
+          document.getElementById("photoContainer").value = results.rows.item(i).profile;
 
         }
  
@@ -103,6 +103,7 @@ var description= document.getElementById("description").value;
 var password= document.getElementById("password").value;
 var dob= document.getElementById("dob").value;
 var phone=document.getElementById("phone").value;
+var profile=document.getElementById("photoContainer").value;
 // var phone= filename;
 console.log(name);
 alert(name);
@@ -112,8 +113,8 @@ db.transaction(
 
         function(tx){
           tx.executeSql(
-             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=? where email = ?",
-            [name,location, description, password, dob, phone, mail],
+             "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=?, profile=? where email = ?",
+            [name,location, description, password, dob, phone,profile, mail],
             onSuccessExecuteSql,
             onError
              )
