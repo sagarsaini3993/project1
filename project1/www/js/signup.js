@@ -11,7 +11,7 @@ var inputLocation = "";
 var db = "";
 
 function signupButton() {
-    alert("login pressed");
+    alert("signup pressed");
     inputMail = document.getElementById("email").value;
     inputPassword = document.getElementById("password").value;
     inputName = document.getElementById("name").value;
@@ -102,7 +102,7 @@ alert("hello databse");
 db.transaction(
         function(tx){
             tx.executeSql(
-                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT,phone TEXT, profile IMAGE)",
+                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT,phone TEXT, profile Text)",
                 [],
                 onSuccessExecuteSql,
                 onError

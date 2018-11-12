@@ -95,7 +95,7 @@ function connectToDatabase() {
 db.transaction(
         function(tx){
             tx.executeSql(
-                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT, description TEXT, phone INTEGER, profile IMAGE)",
+                "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT, name TEXT, birthdate TEXT, location TEXT, description TEXT, phone INTEGER, profile TEXT)",
                 [],
                 insertUser,
                 onError

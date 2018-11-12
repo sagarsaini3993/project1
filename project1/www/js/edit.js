@@ -43,7 +43,6 @@ function displayResults( tx, results ){
           document.getElementById("password").value = results.rows.item(i).password;
           document.getElementById("dob").value = results.rows.item(i).birthdate;
           document.getElementById("phone").value = results.rows.item(i).phone;
-
           document.getElementById("photoContainer").value = results.rows.item(i).profile;
 
         }
@@ -114,7 +113,7 @@ db.transaction(
         function(tx){
           tx.executeSql(
              "UPDATE user set name=?, location=?, description=?, password=?, birthdate=?, phone=?, profile=? where email = ?",
-            [name,location, description, password, dob, phone,profile, mail],
+            [name,location, description, password, dob, phone, profile, mail],
             onSuccessExecuteSql,
             onError
              )
